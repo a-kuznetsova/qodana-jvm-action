@@ -1,16 +1,17 @@
-## Qodana JVM Github Action
+# Qodana JVM
 
 **Qodana** is a code quality monitoring platform that allows you to evaluate the integrity of code you own, contract, or purchase. It brings into your CI/CD pipelines all the smart features you love in the JetBrains IDEs plus continues adding project-level checks like clone detection and license audit.
 
-This Github Action is based on JetBrains/qodana-jvm docker image. It provides static analysis for Java and Kotlin for Server Side projects, and related frameworks and technologies.
+Qodana JVM is based on IntelliJ IDEA Ultimate and provides static analysis for Java and Kotlin for Server Side projects, and related frameworks and technologies.
 
 **Table of Contents**
 
 <!-- toc -->
 
-- [Usage](#usage)
-- [Output Results](#output-results)
-- [License Summary](#license-summary)
+- [Qodana JVM](#qodana-jvm)
+  - [Usage](#usage)
+  - [Output Results](#output-results)
+  - [License Summary](#license-summary)
 
 <!-- tocstop -->
 
@@ -43,12 +44,10 @@ All action's inputs are optional.
   with:
       fail-threshold: 10
       additional-env-variables: |
-            IDE_PROPERTIES_PROPERTY='-Didea.headless.enable.statistics=false;-Didea.required.plugins.id=JavaScript,org.intellij.grails'
+          IDEA_PROPERTIES='/data/project/idea.properties'
 ```
 
-<!-- #TODO: update output results and License Summary -->
-
-<!-- ## Output Results
+## Output Results
 
 An example of the Qodana command-line summary output:
 ```
@@ -63,8 +62,6 @@ An example of the Qodana command-line summary output:
 ---- Problems reported: 3 ----
 ```
 
-Full Qodana results are available in the file `results-allProblems.json` located in the `results-dir` folder.
-
 ## License Summary
 
-By using Qodana, you agree to the [JetBrains EAP user agreement](https://www.jetbrains.com/legal/agreements/user_eap.html) and [JetBrains privacy policy](https://www.jetbrains.com/company/privacy.html). -->
+By using Qodana, you agree to the [JetBrains EAP user agreement](https://www.jetbrains.com/legal/agreements/user_eap.html) and [JetBrains privacy policy](https://www.jetbrains.com/company/privacy.html).

@@ -1,4 +1,4 @@
-name: Qodana - JVM Community
+name: Qodana - JVM
 
 on:
   workflow_dispatch:
@@ -18,14 +18,13 @@ jobs:
             ${{ runner.os }}-qodana-${{ github.ref }}
             ${{ runner.os }}-qodana-
             
-      - name: Qodana - JVM
-        uses: JetBrains/qodana-jvm-action@v1.1.1
+      - uses: JetBrains/qodana-jvm-action@v1.1.1
         with:
           additional-volumes: |
             /your/custom/path/myplugin1:/opt/idea/plugins/myplugin1;
             /your/custom/path/myplugin2:/opt/idea/plugins/myplugin2
           additional-env-variables: |
-            IDE_PROPERTIES_PROPERTY='-Didea.headless.enable.statistics=false;-Didea.required.plugins.id=JavaScript,org.intellij.grails'
+            IDEA_PROPERTIES='/data/project/idea.properties'
 
 
       - uses: actions/upload-artifact@v2

@@ -1,5 +1,7 @@
 # Qodana JVM
 
+![Qodana EAP version alert](resources/eap-alert.png)
+
 **Qodana** is a code quality monitoring platform that allows you to evaluate the integrity of code you own, contract, or purchase. It brings into your CI/CD pipelines all the smart features you love in the JetBrains IDEs plus continues adding project-level checks like clone detection and license audit.
 
 Qodana JVM is based on IntelliJ IDEA Ultimate and provides static analysis for Java and Kotlin for Server Side projects, and related frameworks and technologies.
@@ -34,13 +36,13 @@ Qodana JVM is based on IntelliJ IDEA Ultimate and provides static analysis for J
 
 ```yaml
 - name: Qodana - JVM
-  uses: JetBrains/qodana-jvm-action@v1.1.1
+  uses: JetBrains/qodana-jvm-action@v1.1.1-eap
 ```
 
 All action's inputs are optional. 
 ```yaml
 - name: Qodana - JVM
-  uses: JetBrains/qodana-jvm-action@v1.1.1
+  uses: JetBrains/qodana-jvm-action@v1.1.1-eap
   with:
       fail-threshold: 10
       additional-env-variables: |

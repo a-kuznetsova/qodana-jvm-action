@@ -18,7 +18,7 @@ jobs:
             ${{ runner.os }}-qodana-${{ github.ref }}
             ${{ runner.os }}-qodana-
             
-      - uses: JetBrains/qodana-jvm-action@v1.1.1
+      - uses: JetBrains/qodana-jvm-action@v1.1.1-eap
         with:
           additional-volumes: |
             /your/custom/path/myplugin1:/opt/idea/plugins/myplugin1;
